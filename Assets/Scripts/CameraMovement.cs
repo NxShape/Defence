@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
 	
 	public void Update()
 	{
-		if(MenuUI.Instance.Root.activeSelf) return;
+		if(PopupManager.Instance.OpenedPopup.Count > 0) return;
 		
 		if(Input.GetKey(KeyCode.LeftArrow))
 			transform.Translate(-Vector3.right * Time.deltaTime * Speed);
